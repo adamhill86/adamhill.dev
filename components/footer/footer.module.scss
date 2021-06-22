@@ -1,0 +1,9 @@
+@import 'styles/variables';
+
+button.icon {
+  background-color: $copy-color;
+
+  &:hover:not(:disabled) {
+    background-color: lighten($copy-color, 10%);
+  }
+}

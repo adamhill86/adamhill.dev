@@ -1,16 +1,33 @@
 import LinkTo from 'components/link-to/link-to';
 import ThemeToggle from 'components/theme-toggle/theme-toggle';
+import { createUseStyles } from 'react-jss';
 
-import { Col, Grid } from '@mantine/core';
+import { Col, Grid, theming } from '@mantine/core';
 
-export default function Nav(): JSX.Element {
+interface Props {
+  style?: React.CSSProperties;
+}
+
+export default function Nav({ style }: Props): JSX.Element {
+  const useStyles = createUseStyles(
+    theme => ({
+      wrapper: {
+        background: theme.white,
+      },
+    }),
+    { theming },
+  );
+  const classes = useStyles();
   return (
-    <nav>
+    <nav
+      className={classes.wrapper}
+      style={style}>
       <Grid
         align='center'
         justify='space-between'
         style={{
           margin: 0,
+          padding: '0 20px',
         }}>
         <Col span={2}>
           <LinkTo href='/'>

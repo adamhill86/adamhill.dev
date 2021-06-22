@@ -1,16 +1,32 @@
 /* eslint-disable jsx-a11y/anchor-is-valid -- NextJS workaround, known issue */
 import Link from 'next/link';
 
-interface Props {
-  href: string;
-  className?: string;
+export interface Props {
   children: React.ReactNode;
+  className?: string;
+  href: string;
+  rel?: string;
+  style?: React.CSSProperties;
+  target?: string;
 }
 
-export default function LinkTo({ href, children, className = '' }: Props): JSX.Element {
+export default function LinkTo(
+  {
+    children,
+    className,
+    href,
+    rel,
+    style,
+    target,
+  }: Props,
+): JSX.Element {
   return (
     <Link href={href}>
-      <a className={className}>
+      <a
+        className={className}
+        rel={rel}
+        style={style}
+        target={target}>
         {children}
       </a>
     </Link>

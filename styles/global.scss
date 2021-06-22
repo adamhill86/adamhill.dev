@@ -1,3 +1,5 @@
+@import 'variables';
+
 html,
 body {
   padding: 0;
@@ -12,7 +14,7 @@ h1,
 h2,
 h3,
 p {
-  color: rgba(0, 0, 0, 0.8);
+  color: $copy-color;
 }
 
 * {

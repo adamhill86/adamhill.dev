@@ -4,6 +4,7 @@ import portrait from 'public/images/portrait.jpg';
 
 import { Text, Title } from '@mantine/core';
 
+import Footer from './footer/footer';
 import LinkTo from './link-to/link-to';
 import Nav from './nav/nav';
 
@@ -27,7 +28,11 @@ export default function Layout(
 ): JSX.Element {
   return (
     <>
-      <Nav />
+      <Nav style={{
+        position: 'sticky',
+        top: 0,
+        zIndex: 2,
+      }} />
       <div className={styles.container}>
         <Head>
           <meta
@@ -69,7 +74,9 @@ export default function Layout(
               }}>
               Hi, I'm Adam!
             </Title>
-            <Text size='xl'>
+            <Text
+              component='p'
+              size='xl'>
               Welcome to my website!
               The purpose of this site is for me to test things out & maybe show some things off.
               I'm a professional software engineer based in Virginia.
@@ -83,6 +90,7 @@ export default function Layout(
           </div>
         )}
       </div>
+      <Footer />
     </>
   );
 }
