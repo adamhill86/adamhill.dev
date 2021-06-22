@@ -30,9 +30,6 @@ export default function Layout(
       <Nav />
       <div className={styles.container}>
         <Head>
-          <link
-            href='/favicon.ico'
-            rel='icon' />
           <meta
             content='Learn how to build a personal website using Next.js'
             name='description' />
