@@ -38,15 +38,17 @@ export default function Nav(): JSX.Element {
                 Music
               </LinkTo>
             </li>
-            <ThemeIcon
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              {/* TODO: Use this as the toggle for light/dark mode */}
-              <FiSun />
-            </ThemeIcon>
+            <li>
+              <ThemeIcon
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                {/* TODO: Use this as the toggle for light/dark mode */}
+                <FiSun />
+              </ThemeIcon>
+            </li>
           </ul>
         </Col>
       </Grid>
