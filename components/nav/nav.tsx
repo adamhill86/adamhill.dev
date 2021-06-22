@@ -1,7 +1,7 @@
 import LinkTo from 'components/link-to/link-to';
-import { FiSun } from 'react-icons/fi';
+import ThemeToggle from 'components/theme-toggle/theme-toggle';
 
-import { Col, Grid, ThemeIcon } from '@mantine/core';
+import { Col, Grid } from '@mantine/core';
 
 export default function Nav(): JSX.Element {
   return (
@@ -24,7 +24,7 @@ export default function Nav(): JSX.Element {
             alignItems: 'center',
           }}>
             <li>
-              <LinkTo href='projects'>
+              <LinkTo href='/projects'>
                 Projects
               </LinkTo>
             </li>
@@ -34,20 +34,12 @@ export default function Nav(): JSX.Element {
               </LinkTo>
             </li>
             <li>
-              <LinkTo href='music'>
+              <LinkTo href='/music'>
                 Music
               </LinkTo>
             </li>
             <li>
-              <ThemeIcon
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}>
-                {/* TODO: Use this as the toggle for light/dark mode */}
-                <FiSun />
-              </ThemeIcon>
+              <ThemeToggle />
             </li>
           </ul>
         </Col>

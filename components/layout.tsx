@@ -2,10 +2,12 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import portrait from 'public/images/portrait.jpg';
+
+import { Text, Title } from '@mantine/core';
 
 import Nav from './nav/nav';
 
-import utilStyles from '../styles/utils.module.scss';
 import styles from './layout.module.scss';
 
 const name = '[Your Name]';
@@ -15,8 +17,15 @@ export function pageTitle(page: string): string {
   return `${page} | Adam Hill`;
 }
 
-// TODO: Clean up this props definition
-export default function Layout({ children, home = false, page = 'Home' }: { children: React.ReactNode; home?: boolean; page?: string; }): JSX.Element {
+interface Props {
+  children: React.ReactNode;
+  home?: boolean;
+  page?: string;
+}
+
+export default function Layout(
+  { children, home = false, page = 'Home' }: Props,
+): JSX.Element {
   return (
     <>
       <Nav />
@@ -41,40 +50,35 @@ export default function Layout({ children, home = false, page = 'Home' }: { chil
             name='twitter:card' />
           <title>{pageTitle(page)}</title>
         </Head>
+        {/* TODO: Pull this out into the home page component */}
         <header className={styles.header}>
-          {home
-            ? (
-              <>
-                <Image
-                  alt={name}
-                  className={utilStyles.borderCircle}
-                  height={144}
-                  priority={true}
-                  src='/images/profile.jpg'
-                  width={144} />
-                <h1 className={utilStyles.heading2Xl}>{name}</h1>
-              </>
-            )
-            : (
-              <>
-                <Link href='/'>
-                  <a>
-                    <Image
-                      alt={name}
-                      className={utilStyles.borderCircle}
-                      height={108}
-                      priority={true}
-                      src='/images/profile.jpg'
-                      width={108} />
-                  </a>
-                </Link>
-                <h2 className={utilStyles.headingLg}>
-                  <Link href='/'>
-                    <a className={utilStyles.colorInherit}>{name}</a>
-                  </Link>
-                </h2>
-              </>
-            )}
+          <Image
+            alt={name}
+            className={styles.portrait}
+            height={256}
+            objectFit='cover'
+            objectPosition='45% 50%'
+            placeholder='blur'
+            priority={true}
+            src={portrait}
+            width={256} />
+          <div style={{
+            flex: '1 1 100%',
+            marginLeft: '32px',
+          }}>
+            <Title
+              order={1}
+              style={{
+                fontSize: '56px',
+              }}>
+              Hi, I'm Adam!
+            </Title>
+            <Text size='xl'>
+              Welcome to my website!
+              The purpose of this site is for me to test things out & maybe show some things off.
+              I'm a professional software engineer based in Virginia.
+            </Text>
+          </div>
         </header>
         <main>{children}</main>
         {!home && (
