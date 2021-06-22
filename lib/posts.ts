@@ -58,6 +58,7 @@ export async function getPostData(id: string): Promise<BlogPost> {
 
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- TODO: fix typing
     .use(html)
     .process(matterResult.content);
   const content = processedContent.toString();
