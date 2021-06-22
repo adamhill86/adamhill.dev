@@ -29,6 +29,7 @@ module.exports = {
         'react/jsx-fragments': 'off',
         'react/jsx-indent': [2, 2],
         'react/jsx-indent-props': [2, 2],
+        "react/jsx-max-depth": ['error', { "max": 6 }],
         'react/jsx-no-literals': 'off',
         'react/jsx-props-no-spreading': 'off',
         'react/forbid-component-props': 'off',
