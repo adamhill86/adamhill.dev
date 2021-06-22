@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
   const value = useMemo(() => ({
     value: colorScheme,
     onChange: setColorScheme,
-  }), [colorScheme]);
+  }), [colorScheme, setColorScheme]);
 
   // TODO: Make whole app themeable
   return (
