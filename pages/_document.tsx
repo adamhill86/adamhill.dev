@@ -1,7 +1,7 @@
 // TODO: Fix all these linting issues
-/* eslint-disable func-names */
-/* eslint-disable @typescript-eslint/typedef */
-/* eslint-disable react/display-name */
+/* eslint-disable func-names -- Deal with this later */
+/* eslint-disable @typescript-eslint/typedef -- Deal with this later */
+/* eslint-disable react/display-name -- Deal with this later */
 /* eslint-disable @typescript-eslint/explicit-function-return-type -- Type defs come from next/dist */
 
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
@@ -63,4 +63,7 @@ export default class _Document extends Document {
   }
 }
 
+/* eslint-enable func-names */
+/* eslint-enable @typescript-eslint/typedef */
+/* eslint-enable react/display-name */
 /* eslint-enable @typescript-eslint/explicit-function-return-type */
