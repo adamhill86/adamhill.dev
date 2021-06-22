@@ -1,11 +1,10 @@
-/* eslint-disable jsx-a11y/anchor-is-valid -- NextJS Workaround */
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import portrait from 'public/images/portrait.jpg';
 
 import { Text, Title } from '@mantine/core';
 
+import LinkTo from './link-to/link-to';
 import Nav from './nav/nav';
 
 import styles from './layout.module.scss';
@@ -83,13 +82,10 @@ export default function Layout(
         <main>{children}</main>
         {!home && (
           <div className={styles.backToHome}>
-            <Link href='/'>
-              <a>{'← Back to home'}</a>
-            </Link>
+            <LinkTo href='/'>← Back to home</LinkTo>
           </div>
         )}
       </div>
     </>
   );
 }
-/* eslint-enable jsx-a11y/anchor-is-valid */

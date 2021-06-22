@@ -1,14 +1,35 @@
+import ColorSchemeContext, { ColorScheme } from 'lib/color-scheme-context';
+import { SetStateAction, useContext } from 'react';
 import { FiSun } from 'react-icons/fi';
+import { RiMoonClearLine } from 'react-icons/ri';
 
-// TODO: Flesh this out.
-// Toggle theme when clicked
-// Add outline styling to icon button
+import { ActionIcon } from '@mantine/core';
+import { Nullary, Unary } from '@perfective/common/fp';
+
 export default function ThemeToggle(): JSX.Element {
+  const { value, onChange } = useContext(ColorSchemeContext);
+  const dark = value === 'dark';
+
   return (
-    // <Button
-    //   size='sm'
-    //   variant='outline'>
-    <FiSun />
-    // </Button>
+    <ActionIcon
+      color={dark ? 'yellow' : 'blue'}
+      title='Toggle color scheme'
+      variant='outline'
+      onClick={handleColorSchemeChange(dark, onChange)}>
+      {dark
+        ? (
+          <FiSun />
+        )
+        : (
+          <RiMoonClearLine />
+        )}
+    </ActionIcon>
   );
+}
+
+function handleColorSchemeChange(
+  usingDarkTheme: boolean,
+  onChange: Unary<SetStateAction<ColorScheme>, void>,
+): Nullary<void> {
+  return (): void => onChange(usingDarkTheme ? 'light' : 'dark');
 }
