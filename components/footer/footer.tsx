@@ -113,7 +113,7 @@ export default function Footer(): JSX.Element {
               size='lg'
               variant='filled'>
               <LinkTo
-                href='https://github.com/adamhill86'
+                href='https://www.linkedin.com/in/adamhill86/'
                 rel='nofollow noopener'
                 style={{
                   color: 'unset',
