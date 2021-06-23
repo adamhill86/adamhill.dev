@@ -4,7 +4,7 @@ import { FiSun } from 'react-icons/fi';
 import { RiMoonClearLine } from 'react-icons/ri';
 
 import { ActionIcon } from '@mantine/core';
-import { Nullary, Unary } from '@perfective/common/fp';
+import { Nullary, Unary } from '@perfective/common/function';
 
 export default function ThemeToggle(): JSX.Element {
   const { value, onChange } = useContext(ColorSchemeContext);
