@@ -15,8 +15,14 @@ module.exports = {
         'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
         'jsx-quotes': ['warn', 'prefer-single'],
         '@typescript-eslint/indent': ['error', 2],
-        // This rule conflicts with no confusing arrow
-        '@typescript-eslint/no-extra-parens': 'off',
+        '@typescript-eslint/no-extra-parens': [
+          'error',
+          'all',
+          {
+            enforceForArrowConditionals: false,
+            ignoreJSX: 'all'
+          }
+        ],
         '@typescript-eslint/require-await': 'off',
         '@typescript-eslint/strict-boolean-expressions': 'off',
         'import/no-anonymous-default-export': 'off',
