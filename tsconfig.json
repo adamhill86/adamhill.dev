@@ -51,7 +51,12 @@
     "suppressExcessPropertyErrors": false,
     "suppressImplicitAnyIndexErrors": false,
     "target": "ESNext",
-    "typeRoots": ["@node_modules/@types"]
+    "typeRoots": ["@node_modules/@types"],
+    "paths": {
+      "@components/*": ["./components/*"],
+      "@lib/*": ["./lib/*"],
+      "@images/*": ["./public/images/*"]
+    }
   },
   "exclude": [
     "node_modules"

@@ -1,8 +1,8 @@
-import ColorSchemeContext, { ColorScheme } from 'lib/color-scheme-context';
 import { SetStateAction, useContext } from 'react';
 import { FiSun } from 'react-icons/fi';
 import { RiMoonClearLine } from 'react-icons/ri';
 
+import ColorSchemeContext, { ColorScheme } from '@lib/color-scheme-context';
 import { ActionIcon } from '@mantine/core';
 import { Nullary, Unary } from '@perfective/common/function';
 

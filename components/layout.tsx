@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import portrait from 'public/images/portrait.jpg';
 
+import portrait from '@images/portrait.jpg';
 import { Text, Title } from '@mantine/core';
 
 import Footer from './footer/footer';

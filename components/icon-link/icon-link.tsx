@@ -1,4 +1,4 @@
-import LinkTo, { Props as LinkToProps } from 'components/link-to/link-to';
+import LinkTo, { Props as LinkToProps } from '../link-to/link-to';
 
 export default function IconLink(
   {

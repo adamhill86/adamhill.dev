@@ -1,8 +1,9 @@
-import LinkTo from 'components/link-to/link-to';
-import ThemeToggle from 'components/theme-toggle/theme-toggle';
 import { createUseStyles } from 'react-jss';
 
 import { Col, Grid, theming } from '@mantine/core';
+
+import LinkTo from '../link-to/link-to';
+import ThemeToggle from '../theme-toggle/theme-toggle';
 
 interface Props {
   style?: React.CSSProperties;

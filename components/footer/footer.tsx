@@ -1,6 +1,3 @@
-import IconLink from 'components/icon-link/icon-link';
-import LinkTo from 'components/link-to/link-to';
-import MantineLogo from 'components/mantine-logo/mantine-logo';
 import { RiGithubFill, RiLinkedinFill } from 'react-icons/ri';
 import { SiNextDotJs, SiTypescript } from 'react-icons/si';
 
@@ -14,6 +11,10 @@ import {
   Tooltip,
   useMantineTheme,
 } from '@mantine/core';
+
+import IconLink from '../icon-link/icon-link';
+import LinkTo from '../link-to/link-to';
+import MantineLogo from '../mantine-logo/mantine-logo';
 
 import styles from './footer.module.scss';
 

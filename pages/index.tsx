@@ -2,9 +2,9 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 
-import Date from '../components/date';
-import Layout from '../components/layout';
-import { getSortedPostsData } from '../lib/posts';
+import Date from '@components/date';
+import Layout from '@components/layout';
+import { getSortedPostsData } from '@lib/posts';
 
 import utilStyles from '../styles/utils.module.scss';
 
